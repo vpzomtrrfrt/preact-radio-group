@@ -6,19 +6,19 @@ module.exports = {
   externals: [
     {
       react: {
-        root: 'React',
-        commonjs2: 'react',
-        commonjs: 'react',
-        amd: 'react'
+        root: 'preact',
+        commonjs2: 'preact',
+        commonjs: 'preact',
+        amd: 'preact'
       }
     }
   ],
   module: {
     loaders: [
-      {test: /\.jsx?$/, exclude: /build|node_modules/, loader: 'babel-loader?stage=0'},
+      {test: /\.jsx?$/, exclude: /build|node_modules/, loader: 'babel-loader'},
     ]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['.js', '.jsx']
   }
 };

@@ -1,36 +1,37 @@
 'use strict';
 
-import React from 'react';
-import ReactDOM from 'react-dom';
+import preact from 'preact';
 import {RadioGroup, Radio} from '../index.jsx';
 
-let App = React.createClass({
-  getInitialState() {
-    return {selectedValue: 'apple'};
-  },
+class App extends preact.Component {
+	constructor() {
+		super();
+		this.state = {selectedValue: 'apple'};
+	}
+	handleChange(value) {
+		this.setState({selectedValue: value});
+	}
 
-  handleChange(value) {
-    this.setState({selectedValue: value});
-  },
+	render(props, state) {
+		return <div>
+			<RadioGroup
+				name="fruit"
+				selectedValue={state.selectedValue}
+				onChange={this.handleChange.bind(this)}>
+				<label>
+					<Radio value="apple" />Apple
+				</label>
+				<label>
+					<Radio value="orange" />Orange
+				</label>
+				<label>
+					<Radio value="watermelon" />Watermelon
+				</label>
+			</RadioGroup>
 
-  render() {
-    return (
-      <RadioGroup
-        name="fruit"
-        selectedValue={this.state.selectedValue}
-        onChange={this.handleChange}>
-        <label>
-          <Radio value="apple" />Apple
-        </label>
-        <label>
-          <Radio value="orange" />Orange
-        </label>
-        <label>
-          <Radio value="watermelon" />Watermelon
-        </label>
-      </RadioGroup>
-    );
-  }
-});
+			Selected: {state.selectedValue}
+		</div>;
+	}
+}
 
-ReactDOM.render(<App />, document.getElementById('content'));
+preact.render(<App />, document.getElementById('content'));

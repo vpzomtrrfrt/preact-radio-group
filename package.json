@@ -1,5 +1,5 @@
 {
-  "name": "react-radio-group",
+  "name": "preact-radio-group",
   "version": "3.0.2",
   "description": "Better radio buttons.",
   "main": "lib/index.js",
@@ -11,42 +11,34 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chenglou/react-radio-group.git"
+    "url": "https://github.com/vpzomtrrfrt/preact-radio-group.git"
   },
   "keywords": [
-    "facebook",
-    "react",
+    "preact",
     "radio",
     "radio-group",
     "component",
-    "react-component"
+    "preact-component"
   ],
   "dependencies": {
     "prop-types": "^15.5.8"
   },
   "devDependencies": {
-    "babel": "^5.5.8",
-    "babel-core": "^5.2.17",
-    "babel-loader": "^5.0.0",
-    "react": ">=0.14.0",
-    "react-dom": "^15.5.4",
-    "webpack": "^1.8.11"
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "preact": "^8.2.6",
+    "webpack": "^3.10.0"
   },
-  "author": "chenglou <chenglou92@gmail.com>",
-  "contributors": [
-    {
-      "name": "Jamison Dance",
-      "email": "jergason@gmail.com",
-      "url": "http://jamisondance.com"
-    }
-  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chenglou/react-radio-group/issues"
+    "url": "https://github.com/vpzomtrrfrt/preact-radio-group/issues"
   },
-  "homepage": "https://github.com/chenglou/react-radio-group",
+  "homepage": "https://github.com/vpzomtrrfrt/preact-radio-group",
   "peerDependencies": {
-    "react": ">=0.14.0",
-    "react-dom": "^15.5.4"
+    "preact": ">=8.2.6"
   }
 }

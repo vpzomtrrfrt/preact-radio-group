@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import preact from 'preact';
 
-export class Radio extends React.Component {
+export class Radio extends preact.Component {
   render() {
     const {name, selectedValue, onChange} = this.context.radioGroup;
     const optional = {};
@@ -26,7 +26,7 @@ Radio.contextTypes = {
   radioGroup: PropTypes.object
 };
 
-export class RadioGroup extends React.Component {
+export class RadioGroup extends preact.Component {
   getChildContext() {
     const {name, selectedValue, onChange} = this.props;
     return {
